@@ -28,6 +28,9 @@ print(f"Your word is '{word}'")
 
 while not is_game_over():
     guess = input("Your next take: ")
+    if guess in guesses:
+        print('you have already tried this word! Try again')
+        continue
     if guess in full_list:
         guessed += 1
         guesses.append(guess)
